@@ -10,4 +10,4 @@ app.get('/', function(req, res){
 });
 
 app.listen(port);
-console.log("Running on port 5000... " + "http://localhost:5000");
+//console.log("Running on port 5000... " + "http://localhost:5000");
