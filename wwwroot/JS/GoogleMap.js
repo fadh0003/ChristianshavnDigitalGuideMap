@@ -8,7 +8,7 @@ function initMap() {
         fullscreenControl: false
     }
 
-    var Places = {
+    /*var Places = {
         Locations: {
             CafeHalvandet:{lat: 55.695443, lng: 12.609745},
             LaBanchina:{lat: 55.689343, lng: 12.610985},
@@ -21,7 +21,7 @@ function initMap() {
             MargretheholmhavnInfo: "<h2>Lynetten, Margretheholms havn</h2> <h3>Address: Refshalevej 200, 1432 København</h3> <div><a href='https://www.google.dk/maps/dir//lynetten'>Click to get Directions to Lynetten, Margretheholms havn</a></div>",
             SofiebadetInfo: "<h2>Sofiebadet</h2> <h3>Address: Sofiegade 15, 1418 København</h3> <div><a href='https://www.google.dk/maps/dir//Sofiebadet'>Click to get Directions to Sofiebadet</a></div>"
         }
-    }
+    }*/
 
     var map = new google.maps.Map(document.getElementById('map'), options);
     
@@ -48,8 +48,24 @@ function initMap() {
         markerCluster.addMarker(marker);
     }
 
-    addMarkerToMap({coords:Places.Locations.CafeHalvandet, content: Places.LocationsInfo.CafeHalvandetInfo});
-    addMarkerToMap({coords:Places.Locations.LaBanchina, content: Places.LocationsInfo.LaBanchinaInfo});
-    addMarkerToMap({coords:Places.Locations.Margretheholmhavn, content: Places.LocationsInfo.MargretheholmhavnInfo});
-    addMarkerToMap({coords:Places.Locations.Sofiebadet, content: Places.LocationsInfo.SofiebadetInfo});
+    function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
+    
+    //usage:
+    readTextFile("/JSON/Places.json", function(text){
+        var Placesdata = JSON.parse(text);
+        addMarkerToMap({coords:Placesdata.Locations.CafeHalvandet, content: Placesdata.LocationsInfo.CafeHalvandetInfo});
+        addMarkerToMap({coords:Placesdata.Locations.LaBanchina, content: Placesdata.LocationsInfo.LaBanchinaInfo});
+        addMarkerToMap({coords:Placesdata.Locations.Margretheholmhavn, content: Placesdata.LocationsInfo.MargretheholmhavnInfo});
+        addMarkerToMap({coords:Placesdata.Locations.Sofiebadet, content: Placesdata.LocationsInfo.SofiebadetInfo});
+    });
 }
