@@ -4,13 +4,16 @@
         "CafeHalvandet":{"lat": 55.695443, "lng": 12.609745},
         "LaBanchina":{"lat": 55.689343, "lng": 12.610985},
         "Margretheholmhavn":{"lat": 55.689658, "lng": 12.619308},
-        "Sofiebadet":{"lat": 55.670969, "lng": 12.590944}
+        "Sofiebadet":{"lat": 55.670969, "lng": 12.590944},
+        "OurSavioursChurch":{"lat":55.672634 , "lng":12.593812},
+
     },
     "LocationsInfo":
     {
         "CafeHalvandetInfo":"<h2>Café Halvandet</h2> <h3>Address: 325 Refshalevej København K, 1432 København</h3> <div><a href='https://www.google.dk/maps/dir//Cafe+Halvandet'>Click to get Directions to Café Halvandet</a></div>",
         "LaBanchinaInfo": "<h2>La Banchina</h2> <h3>Address: Refshalevej 141A, 1432 København</h3> <div><a href='https://www.google.dk/maps/dir//La+Banchina'>Click to get Directions to La Banchina</a></div>",
         "MargretheholmhavnInfo": "<h2>Lynetten, Margretheholms havn</h2> <h3>Address: Refshalevej 200, 1432 København</h3> <div><a href='https://www.google.dk/maps/dir//lynetten'>Click to get Directions to Lynetten, Margretheholms havn</a></div>",
-        "SofiebadetInfo": "<h2>Sofiebadet</h2> <h3>Address: Sofiegade 15, 1418 København</h3> <div><a href='https://www.google.dk/maps/dir//Sofiebadet'>Click to get Directions to Sofiebadet</a></div>"
+        "SofiebadetInfo": "<h2>Sofiebadet</h2> <h3>Address: Sofiegade 15, 1418 København</h3> <div><a href='https://www.google.dk/maps/dir//Sofiebadet'>Click to get Directions to Sofiebadet</a></div>",
+        "OurSavioursChurchInfo": "<h2>Our Saviours Church</h2> <h3>Address: Sankt Annæ Gade 29, 1416 København</h3> <div><a href='https://www.google.dk/maps/dir//Church+of+Our+Saviour'>Click to get Directions to Church of our saviour</a></div>"
     }
 }
