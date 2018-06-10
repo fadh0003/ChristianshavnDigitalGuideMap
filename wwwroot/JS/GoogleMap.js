@@ -63,8 +63,9 @@ function initMap() {
     //usage:
     readTextFile("/JSON/Places.json", function(text){
         var Placesdata = JSON.parse(text);
+        addMarkerToMap({coords:Placesdata.Locations.CafeHalvandet, content: Placesdata.LocationsInfo.CafeHalvandetInfo});
+        addMarkerToMap({coords:Placesdata.Locations.LaBanchina, content: Placesdata.LocationsInfo.LaBanchinaInfo});
+        addMarkerToMap({coords:Placesdata.Locations.Margretheholmhavn, content: Placesdata.LocationsInfo.MargretheholmhavnInfo});
         addMarkerToMap({coords:Placesdata.Locations.Sofiebadet, content: Placesdata.LocationsInfo.SofiebadetInfo});
-        addMarkerToMap({coords:Placesdata.Locations.OurSavioursChurch, content: Placesdata.LocationsInfo.OurSavioursChurchInfo});
-        
     });
 }
